@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Homework</title>
+  <title>Homework 4</title>
 </head>
 <body>
 <!--
@@ -28,7 +28,11 @@
 <script>
   "use strict";
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
+  let namber = +prompt("Введите число.");
+  let unit = namber % 10;
+  let dozens = Math.trunc((namber / 10) % 10);
+  let hundreds = Math.trunc((namber / 100) % 10);
+  alert("Ваше число: " + namber + ". Колличество сотен в нем: " + hundreds + ", десятков: " + dozens + ", едениц: " + unit + ".");
 </script>
 </body>
 </html>
