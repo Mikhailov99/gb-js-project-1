@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework-2-5</title>
+</head>
+<body>
+<!--
+Обязательное задание.
+
+Необходимо скопировать и вставить в данный скрипт все функции из 4 задания.
+Необходимо реализовать функцию:
+mathOperation(arg1, arg2, operation);
+Параметры:
+arg1 - первое число.
+arg2 - второе число.
+operation - строка, которая содержит один символ из: "+", "-", "*", "/".
+Функция mathOperation должна вернуть результат операции, который был передан в
+параметр operation для двух первых аргументов (arg1 и arg2).
+Функция mathOperation должна использовать для вычисления функции из 4 задания.
+
+Примеры вызова функции:
+console.log(mathOperation(5, 3, "+")); // 8
+console.log(mathOperation(5, 3, ":)")); // NaN
+
+Функции mathOperation всегда передаются корректные числа, проверки на NaN,
+Infinity делать не нужно, однако, в случае если был передан некорректный
+аргумент в параметр operation, необходимо вернуть NaN.
+
+Необходимо для всех функций прописать комментарии jsdoc https://jsdoc.app/.
+-->
+<script>
+  "use strict";
+
+  const a = +prompt('Введите, пожалуйста, число a');
+  const b = +prompt('Введите, пожалуйста, число b');
+  // const arg1 = +prompt('Введите, пожалуйста, первое число');
+  // const arg2 = +prompt('Введите, пожалуйста, второе число');
+
+  /**
+   * У меня не работает jsdoc в html файле. Не знаю как исправить данную ситуацию.
+   * Может вы знаете решение проблемы? Скачал дополнение jsdoc в vs и они работает 
+   * только в js файле. Тут использовать не могу. Doxygen Documentation Generator - 
+   * это расширение, которым пользуюсь.
+   *
+   */
+
+  function mathOperation(a, b, operation) {
+    switch (operation) {
+      case "+": return sum(a, b);
+      case "-": return diff(a, b);
+      case "*": return mul(a, b);
+      case "/": return division(a, b);
+      default: return NaN;
+    }
+  }
+
+  function sum(a, b) {
+    return a + b;
+  }
+  console.log(sum(a, b));
+
+  function diff(a, b) { 
+    let c = 0;
+    if (a >= b) {
+     c = a - b;
+    } else {
+      c = b - a;
+    }
+    return c;
+  }
+  console.log(diff(a, b));
+
+  function mul(a, b) {
+    return a * b;
+  }
+  console.log(mul(a, b));
+
+  function division(a, b) {
+    return a / b;
+  }
+  console.log(division(a, b));
+
+  // Здесь пишем решение, данный комментарий необходимо стереть.
+</script>
+</body>
+</html>
